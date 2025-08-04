@@ -149,3 +149,142 @@ body {
     transform: translateX(-50%);
   }
 }
+
+/* Event Section Styles */
+
+
+.event-section__container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 1496px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+ .event-section__top {
+  padding: 60px 30px 0px 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.event-section__lead {
+  font-family: 'Merriweather', serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: #313131;
+  margin: 0 0 24px;
+}
+
+.event-section__lead--highlight {
+  color: #F54932;
+  font-weight: 700;
+}
+
+
+.event-section__bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.event-section__subtitle { 
+  font-family: 'Merriweather', serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: #313131;
+  margin: 0 0 24px;
+}
+
+.highlight-red {
+  color: #F54932;
+  font-weight: 700;
+}
+
+
+.event-section__left {
+  flex: 2;
+}
+
+.event-section__right {
+  flex: 1;
+}
+
+
+.event-section__left-bottom {
+  flex: 1;
+}
+
+.event-section__right-bottom {
+  margin-top: 30px;
+  flex: 2;
+}
+
+.event-section__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 20px;
+  margin-bottom: 28px;
+}
+
+
+.event-section__table td {
+  padding: 18px 12px;
+  border-bottom: 1px solid #D0D0D0;
+  vertical-align: top;
+}
+  
+
+  .event-section__table td:first-child {
+  border-right: 1px solid #D0D0D0;
+  color: #313131; 
+  width: 50%;
+}
+
+.old-price {
+  text-decoration: line-through;
+  text-decoration-color: #F54932; 
+  color: #000000; 
+}
+
+  .event-section__note {
+    font-size: 16px;
+    color: #3057A2;
+    margin-top: 36px;
+  }
+
+  @media (max-width: 960px) {
+    .event-section__lead,
+    .event-section__subtitle {
+      font-size: 26px;
+    }
+
+    .event-section__table td {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 960px) {
+  .event-section__top,
+  .event-section__bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .event-section__left,
+  .event-section__right,
+  .event-section__left-bottom,
+  .event-section__right-bottom {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .event-section__image-top {
+    margin: 0 auto 24px;
+  }
+}
