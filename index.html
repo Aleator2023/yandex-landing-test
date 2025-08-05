@@ -10,25 +10,30 @@
   <header></header> 
   <main>
 <section class="hero">
-    <div class="hero__background">
+
+  <div class="hero__background">
   <picture>
     <source srcset="assets/mobilescreen.png" media="(max-width: 768px)">
     <img src="assets/main.png" alt="background">
   </picture>
-</div>
+  </div> 
+
     <div class="hero__content page-wrapper">
       <img src="assets/4horses.png" alt="Клуб четырёх коней" class="hero__logo">
       <h1 class="hero__title">
-        ПРЕВРАТИТЕ <br> УЕЗДНЫЙ ГОРОД <br>  В СТОЛИЦУ <br> ЗЕМНОГО ШАРА
+  ПРЕВРАТИТЕ <br>
+  УЕЗДНЫЙ ГОРОД <br>
+  <span class="hero__indent-left-1">В СТОЛИЦУ</span> <br>
+  <span class="hero__indent-left-2">ЗЕМНОГО ШАРА</span>
       </h1>
       <p class="hero__subtitle">
        Оплатите взнос на телеграмм для организации<br>
        Международного васюкинского турнира по шахматам
       </p>
       <div class="hero__buttons">
-        <button class="btn btn-dark">Поддержать <br> шахматную мысль</button>
-        <button class="btn btn-outline">Подробнее <br> о турнире</button>
-      </div>
+  <a href="#lecture" class="btn btn-dark">Поддержать шахматную мысль</a>
+  <a href="#simul" class="btn btn-outline">Подробнее о турнире</a>
+</div>
     </div>
     </section>
        <div class="ticker-wrapper">
@@ -44,7 +49,7 @@
   <section class="event-section">
   <div class="event-section__container">
       <div class="event-section__top">
-    <div class="event-section__left">
+    <div id="lecture" class="event-section__left">
       <p class="event-section__lead">
         ЧТОБЫ ПОДДЕРЖАТЬ <br>
         МЕЖДУНАРОДНЫЙ ВАСЮКИНСКИЙ <br>
@@ -60,7 +65,7 @@
     <div class="event-section__left-bottom">
       <img class="event-section__image-large" src="assets/1player.png" alt="шахматист" />
     </div>
-    <div class="event-section__right-bottom">
+    <div id="simul" class="event-section__right-bottom">
       <p class="event-section__subtitle">
         И СЕАНС <span class="highlight-red">ОДНОВРЕМЕННОЙ ИГРЫ <br> В ШАХМАТЫ НА 160 ДОСКАХ</span> <br>
         ГРОССМЕЙСТЕРА О. БЕНДЕРА
