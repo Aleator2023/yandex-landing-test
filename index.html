@@ -7,26 +7,30 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="hero">
+  <header></header> 
+  <main>
+<section class="hero">
     <div class="hero__background">
-      <img src="assets/main.png" alt="background">
-    </div>
+  <picture>
+    <source srcset="assets/mobilescreen.png" media="(max-width: 768px)">
+    <img src="assets/main.png" alt="background">
+  </picture>
+</div>
     <div class="hero__content page-wrapper">
       <img src="assets/4horses.png" alt="Клуб четырёх коней" class="hero__logo">
       <h1 class="hero__title">
-        ПРЕВРАТИТЕ <br> УЕЗДНЫЙ ГОРОД <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; В СТОЛИЦУ <br> &nbsp; ЗЕМНОГО ШАРА
+        ПРЕВРАТИТЕ <br> УЕЗДНЫЙ ГОРОД <br>  В СТОЛИЦУ <br> ЗЕМНОГО ШАРА
       </h1>
       <p class="hero__subtitle">
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Оплатите взнос на телеграмм для организации<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Международного васюкинского турнира по шахматам
+       Оплатите взнос на телеграмм для организации<br>
+       Международного васюкинского турнира по шахматам
       </p>
       <div class="hero__buttons">
         <button class="btn btn-dark">Поддержать <br> шахматную мысль</button>
         <button class="btn btn-outline">Подробнее <br> о турнире</button>
       </div>
     </div>
-  </header>
-  <main>
+    </section>
        <div class="ticker-wrapper">
       <div class="ticker__wrapper">
         <div class="ticker__content">
@@ -52,7 +56,6 @@
       <img class="event-section__image-top" src="assets/5people.png" alt="группа игроков" />
     </div>
   </div>
-
       <div class="event-section__bottom">
     <div class="event-section__left-bottom">
       <img class="event-section__image-large" src="assets/1player.png" alt="шахматист" />
@@ -62,7 +65,6 @@
         И СЕАНС <span class="highlight-red">ОДНОВРЕМЕННОЙ ИГРЫ <br> В ШАХМАТЫ НА 160 ДОСКАХ</span> <br>
         ГРОССМЕЙСТЕРА О. БЕНДЕРА
       </p>
-
       <table class="event-section__table">
         <tr>
           <td>Место проведения:</td>
@@ -103,7 +105,6 @@
     </span>
   </h2>
 </div>
-
 <div class="transform-section__grid">
   <div class="transform-section__item item-1">
     <span>1</span>Строительство железнодорожной магистрали Москва–Васюки
@@ -128,28 +129,28 @@
     <img src="assets/plane.png" alt="Самолёт" class="transform-section__plane" />
   </div>
 </div>
-
     </div>
   </div>
 </section>
-
 <section class="participants-section">
   <div class="participants-header">
     <h2 class="participants-section__title">Участники турнира</h2>
 
     <div class="slider-controls">
-      <button class="slider-btn prev-btn" aria-label="Предыдущий слайд">&#8592;</button>
+      <button class="slider-btn prev-btn" aria-label="Предыдущий слайд">
+          <img src="assets/carousel button left.png" alt="Назад">
+  </button>
       <div class="pagination-indicator">
         <span id="visible-count">3</span> / <span id="total-slides">6</span>
       </div>
-      <button class="slider-btn next-btn" aria-label="Следующий слайд">&#8594;</button>
+      <button class="slider-btn next-btn" aria-label="Следующий слайд">
+        <img src="assets/carousel button right.png" alt="Назад">
+      </button>
     </div>
   </div>
-
   <div class="custom-slider">
     <div class="slider-wrapper">
       <div class="slider-track">
-
         <div class="slide">
           <div class="participant-card">
             <img src="assets/participant.png" alt="Хосе-Рауль Капабланка" class="participant-card__img">
@@ -158,7 +159,6 @@
             <button class="participant-card__btn">Подробнее</button>
           </div>
         </div>
-
         <div class="slide">
           <div class="participant-card">
             <img src="assets/participant.png" alt="Эммануил Ласкер" class="participant-card__img">
@@ -167,7 +167,6 @@
             <button class="participant-card__btn">Подробнее</button>
           </div>
         </div>
-
         <div class="slide">
           <div class="participant-card">
             <img src="assets/participant.png" alt="Александр Алехин" class="participant-card__img">
@@ -176,7 +175,6 @@
             <button class="participant-card__btn">Подробнее</button>
           </div>
         </div>
-
         <div class="slide">
           <div class="participant-card">
             <img src="assets/participant.png" alt="Арон Нимцович" 
@@ -186,7 +184,6 @@
             <button class="participant-card__btn">Подробнее</button>
           </div>
         </div>
-
         <div class="slide">
           <div class="participant-card">
             <img src="assets/participant.png" alt="Рихард Рети" 
@@ -196,7 +193,6 @@
             <button class="participant-card__btn">Подробнее</button>
           </div>
         </div>
-
           <div class="slide">
           <div class="participant-card">
             <img src="assets/participant.png" alt="Остап Бендер" 
@@ -206,14 +202,30 @@
             <button class="participant-card__btn">Подробнее</button>
           </div>
         </div>
-
       </div>
     </div>
   </div>
 </section>
-
+     <div class="ticker-wrapper">
+      <div class="ticker__wrapper">
+        <div class="ticker__content">
+          ДЕЛО ПОМОЩИ УТОПАЮЩИМ - ДЕЛО РУК САМИХ УТОПАЮЩИХ! • ШАХМАТЫ ДВИГАЮТ ВПЕРЕД НЕ ТОЛЬКО КУЛЬТУРУ, НО И ЭКОНОМИКУ! • ЛЕД ТРОНУЛСЯ, ГОСПОДА ПРИСЯЖНЫЕ ЗАСЕДАТЕЛИ! •
+        </div>
+        <div class="ticker__content">
+          ДЕЛО ПОМОЩИ УТОПАЮЩИМ - ДЕЛО РУК САМИХ УТОПАЮЩИХ! • ШАХМАТЫ ДВИГАЮТ ВПЕРЕД НЕ ТОЛЬКО КУЛЬТУРУ, НО И ЭКОНОМИКУ! • ЛЕД ТРОНУЛСЯ, ГОСПОДА ПРИСЯЖНЫЕ ЗАСЕДАТЕЛИ! •
+        </div>
+      </div>
+    </div> 
   </main>
-  <footer></footer>
+ <footer class="footer">
+  <div class="footer-top"></div>
+  <div class="footer-bottom">
+    <p>
+      Все персонажи, события и цитаты являются вымышленными и не принадлежат создателям сайта.
+      С подробностями можно познакомиться в главе XXXIV романа Ильи Ильфа и Евгения Петрова «Двенадцать стульев».
+    </p>
+  </div>
+</footer>
   <script src="script.js"></script>
 </body>
 </html>

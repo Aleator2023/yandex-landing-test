@@ -1,26 +1,14 @@
 const track = document.querySelector('.slider-track');
-const slides = document.querySelectorAll('.slide');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 const visibleCountEl = document.getElementById('visible-count');
 const totalSlidesEl = document.getElementById('total-slides');
 
-const slideCount = slides.length;
-let index = 1; 
-
+let slides;
+let allSlides;
+let index = 1;
 let slideInterval;
 let isTransitioning = false;
-
-const firstClone = slides[0].cloneNode(true);
-const lastClone = slides[slideCount - 1].cloneNode(true);
-
-firstClone.classList.add('clone');
-lastClone.classList.add('clone');
-
-track.appendChild(firstClone);
-track.insertBefore(lastClone, slides[0]);
-
-const allSlides = document.querySelectorAll('.slide'); 
 
 function setInitialPosition() {
   const width = allSlides[0].getBoundingClientRect().width;
@@ -36,23 +24,23 @@ function showSlide(i) {
   track.style.transform = `translateX(-${width * i}px)`;
 }
 
-track.addEventListener('transitionend', () => {
-  const width = allSlides[0].offsetWidth;
-
-  if (allSlides[index].classList.contains('clone')) {
-    track.style.transition = 'none';
-
-    if (index === 0) {
-      index = slideCount;
-    } else if (index === allSlides.length - 1) {
-      index = 1;
-    }
-
-    track.style.transform = `translateX(-${width * index}px)`;
+function updateVisibleCount() {
+  const width = window.innerWidth;
+  if (width < 768) {
+    visibleCountEl.textContent = '1';
+  } else if (width < 1024) {
+    visibleCountEl.textContent = '2';
+  } else {
+    visibleCountEl.textContent = '3';
   }
 
-  isTransitioning = false;
-});
+  totalSlidesEl.textContent = slides.length;
+}
+
+function updateTrackWidth() {
+  const slideWidth = allSlides[0].getBoundingClientRect().width;
+  
+}
 
 function nextSlide() {
   if (index >= allSlides.length - 1) return;
@@ -76,20 +64,19 @@ function stopAutoScroll() {
   clearInterval(slideInterval);
 }
 
-
-function updateVisibleCount() {
-  const width = window.innerWidth;
-
-  if (width < 768) {
-    visibleCountEl.textContent = '1';
-  } else if (width < 1024) {
-    visibleCountEl.textContent = '2';
-  } else {
-    visibleCountEl.textContent = '3';
+track.addEventListener('transitionend', () => {
+  const width = allSlides[0].offsetWidth;
+  if (allSlides[index].classList.contains('clone')) {
+    track.style.transition = 'none';
+    if (index === 0) {
+      index = slides.length;
+    } else if (index === allSlides.length - 1) {
+      index = 1;
+    }
+    track.style.transform = `translateX(-${width * index}px)`;
   }
-
-  totalSlidesEl.textContent = slideCount; // 6
-}
+  isTransitioning = false;
+});
 
 nextBtn.addEventListener('click', () => {
   stopAutoScroll();
@@ -103,25 +90,27 @@ prevBtn.addEventListener('click', () => {
   startAutoScroll();
 });
 
-
 window.addEventListener('resize', () => {
-  track.style.transition = 'none';
+       
   setInitialPosition();
   updateVisibleCount();
 });
 
 window.addEventListener('load', () => {
-  const slideCount = slides.length;
+  slides = document.querySelectorAll('.slide');
+
   const firstClone = slides[0].cloneNode(true);
-  const lastClone = slides[slideCount - 1].cloneNode(true);
+  const lastClone = slides[slides.length - 1].cloneNode(true);
   firstClone.classList.add('clone');
   lastClone.classList.add('clone');
 
   track.appendChild(firstClone);
-  track.insertBefore(lastClone, track.firstChild);
+  track.insertBefore(lastClone, slides[0]);
 
   allSlides = document.querySelectorAll('.slide');
   index = 1;
+
+          
   setInitialPosition();
   startAutoScroll();
   updateVisibleCount();
