@@ -462,6 +462,12 @@ body {
     display: none;
   }
 
+  .event-section__image-large {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 
   @media (max-width: 768px) {
   .event-section__lead,
