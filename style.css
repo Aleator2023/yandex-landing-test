@@ -624,8 +624,8 @@ body {
 
 .transform-section__plane {
   position: absolute;
-  right: 0;
-  bottom: -30px;
+  right: -60px;
+  bottom: -20px;
   width: 350px;
   z-index: 0;
   pointer-events: none;
@@ -645,8 +645,6 @@ body {
     padding-bottom: 30px;
     position: relative;
   }
-
-
 
   .transform-section__item {
     flex: 0 0 auto;
@@ -736,8 +734,8 @@ body {
   .transform-section__plane_main {
     display: block;
     position: absolute;
-    left: 30%;
-    top: 20%; 
+    left: 35%;
+    top: 15%; 
     width: 100%;
     max-width: 350px;
     z-index: 1;
